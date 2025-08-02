@@ -1,56 +1,84 @@
-✨ Laravel + React StarterKit
-Boilerplate fullstack modern buat kamu yang males setup dari nol 😎
+# 🚀 Laravel + React StarterKit
 
-🧠 Apa ini?
-Ini starter project gabungan Laravel (Backend API) + React.js (Frontend SPA) yang udah di-setup biar langsung gas tanpa drama.
-Cocok buat bikin dashboard, aplikasi internal, atau project skala kecil-menengah.
+Boilerplate fullstack modern buat kamu yang males setup dari nol 😎  
+Gabungan Laravel (API backend) + React (SPA frontend) dengan struktur rapi, siap ngoding!
 
-🧩 Fitur Utama:
+---
 
-⚙️ Laravel 11 + Sanctum Auth
+## 🧠 Apa Ini?
 
-⚛️ React 18 + Vite + TailwindCSS
+Ini starter project gabungan **Laravel** dan **React.js** yang udah di-setup biar kamu langsung bisa fokus ke fitur aplikasi, bukan setup dasar.
 
-🗂️ Folder structure rapi dan scalable
+Cocok buat:
+- 🧾 Dashboard internal
+- 💼 Aplikasi bisnis kecil-menengah
+- 🧪 Project belajar stack Laravel + React
 
-🔐 Login/Register bawaan via API
+---
 
-🔄 Routing React (React Router DOM)
+## 🧩 Fitur Utama
 
-📦 Siap deploy ke VPS / hosting modern
+- ⚙️ **Laravel 11** (API Ready) + Sanctum Auth
+- ⚛️ **React 18** + **Vite** + **TailwindCSS**
+- 🗂️ Struktur proyek rapi dan scalable
+- 🔐 Autentikasi Login/Register via API
+- 🔄 Routing SPA dengan React Router DOM
+- 🧱 Komponen reusable siap pakai
+- ☁️ Siap deploy ke VPS/Hosting
 
-🛠️ Cara Pakai (Dev Mode):
+---
 
+## 🛠️ Cara Pakai (Dev Mode)
+
+### 1. Clone Project
+
+```bash
+git clone https://github.com/JhenzXdOfc/Laravel-React-StarterKit.git
+2. Setup Backend (Laravel)
 bash
 Copy
 Edit
-# Clone project
-git clone https://github.com/JhenzXdOfc/Laravel-React-StarterKit.git
-
-# Masuk folder backend
 cd backend
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed
 php artisan serve
-
-# Buka tab baru, masuk folder frontend
-cd ../frontend
-npm install
-npm run dev
-📦 Build Production:
-
+3. Setup Frontend (React)
 bash
 Copy
 Edit
-# Frontend build
+cd ../frontend
+npm install
+npm run dev
+Frontend jalan di http://localhost:5173
+Backend jalan di http://localhost:8000
+
+🏗️ Build untuk Production
+bash
+Copy
+Edit
+# Build frontend
+cd frontend
 npm run build
 
-# Lalu publish ke Laravel:
+# Publish ke Laravel (public/frontend)
+cp -r dist ../backend/public/frontend
+
+# Pastikan Laravel sudah di-serve dan storage linked
+cd ../backend
 php artisan migrate --force
 php artisan storage:link
-🤝 Kontribusi / Ide?
-Pull Request atau buka Issue aja ya~
-Jangan lupa ⭐ repo ini kalau bermanfaat!
+🙌 Kontribusi & Feedback
+Pull Request terbuka untuk kontribusi 💡
 
+Buka Issue kalau nemu bug
+
+Jangan lupa kasih ⭐ kalau project ini membantumu!
+
+📃 Lisensi
+MIT License © JhenzXdOfc
+
+vbnet
+Copy
+Edit
